@@ -1,0 +1,9 @@
+﻿namespace ToolsRent.BL.Model;
+
+public abstract class BasePassport
+{
+    public abstract string? IdentityNumber { get; set; }
+    public abstract string? IssuingDate { get; set; }
+    public abstract string? IssuingOrganization { get; set; }
+    public abstract string? RegistrationPlace { get; set; }
+}
