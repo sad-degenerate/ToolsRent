@@ -6,6 +6,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="95*"/>
+        </Grid.RowDefinitions>
         
+        <Button Grid.Row="0" Grid.Column="0" Content="Арендаторы" Click="RentersClick"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Инструменты"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="Категории инструментов"/>
+        <Button Grid.Row="0" Grid.Column="3" Content="Составить договор"/>
+        <Button Grid.Row="0" Grid.Column="4" Content="Настройки"/>
+        
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Name="MainFrame"/>
     </Grid>
 </Window>
