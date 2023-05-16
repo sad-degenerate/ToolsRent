@@ -4,13 +4,49 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d"
-      Title="AddEditRenterPage" Height="450" Width="800">
+      Title="AddEditRenterPage">
     <Grid>
-        <StackPanel Name="RenterData">
-            <Label Content="Данные клиента:" Style="{StaticResource StackPanelHeaderLabel}"/>
-            
-            <Label Content="Фамилия клиента:" Style="{StaticResource StackPanelProperty}"/>
-            <TextBox Name="TbxSurname" Style="{StaticResource StackPanelProperty}"/>
-        </StackPanel>
+        <ScrollViewer>
+            <StackPanel Name="RenterData">
+                <Label Content="Данные клиента:" Style="{StaticResource StackPanelHeaderLabel}"/>
+                
+                <Label Content="Фамилия:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxSurname" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Имя:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxName" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Отчество:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxPatronymic" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Серия/№ паспорта:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxPassportNumber" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Кем выдан паспорт:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxIssuingOrganization" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Дата выдачи паспорта:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxIssuingDate" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Место регистрации:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxRegistrationPlace" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Телефон:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxPhone" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Статус:" Style="{StaticResource StackPanelProperty}"/>
+                <CheckBox Name="CbxGreenStatus" Style="{StaticResource StackPanelProperty}" Content="Зеленый"/>
+                <CheckBox Name="CbxYellowStatus" Style="{StaticResource StackPanelProperty}" Content="Желтый"/>
+                <CheckBox Name="CbxRedStatus" Style="{StaticResource StackPanelProperty}" Content="Красный"/>
+                <CheckBox Name="CbxDeposit" Style="{StaticResource StackPanelProperty}" Content="Без залога"/>
+                <Label Content="Сумма совершенных транзакций за все время:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxAmountOfPurchases" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Комментарии:" Style="{StaticResource StackPanelProperty}"/>
+                <RichTextBox Name="RtbComment" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Button Content="Сохранить изменения" Name="BtnSave" Style="{StaticResource StackPanelSaveButton}"/>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

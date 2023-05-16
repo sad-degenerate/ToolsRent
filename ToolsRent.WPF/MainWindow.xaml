@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1000" Width="1700">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,8 +14,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="95*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         
         <Button Grid.Row="0" Grid.Column="0" Content="Арендаторы" Click="RentersClick"/>
@@ -24,6 +24,6 @@
         <Button Grid.Row="0" Grid.Column="3" Content="Составить договор"/>
         <Button Grid.Row="0" Grid.Column="4" Content="Настройки"/>
         
-        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Name="MainFrame"/>
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Name="MainFrame" Navigated="MainFrame_OnNavigated"/>
     </Grid>
 </Window>
