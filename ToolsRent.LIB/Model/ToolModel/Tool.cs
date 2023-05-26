@@ -1,8 +1,8 @@
 ﻿namespace ToolsRent.LIB.Model.ToolModel;
 
-public class Tool : BaseEntity
+public class Tool : IBaseEntity
 {
-    public override int Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public int Count { get; set; }
     public int Deposit { get; set; }

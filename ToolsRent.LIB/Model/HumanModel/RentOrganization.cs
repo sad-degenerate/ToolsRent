@@ -1,8 +1,8 @@
 ﻿namespace ToolsRent.LIB.Model.HumanModel;
 
-public class RentOrganization : BaseEntity
+public class RentOrganization : IBaseEntity
 {
-    public override int Id { get; set; }
+    public int Id { get; set; }
     public string Name { get; set; }
     public string RegistrationState { get; set; }
 }
