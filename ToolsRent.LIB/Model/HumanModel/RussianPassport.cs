@@ -1,4 +1,4 @@
-﻿namespace ToolsRent.LIB.Model;
+﻿namespace ToolsRent.LIB.Model.HumanModel;
 
 public class RussianPassport : BasePassport
 {

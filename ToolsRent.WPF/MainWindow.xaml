@@ -19,8 +19,8 @@
         </Grid.RowDefinitions>
         
         <Button Grid.Row="0" Grid.Column="0" Content="Арендаторы" Click="RentersClick"/>
-        <Button Grid.Row="0" Grid.Column="1" Content="Инструменты"/>
-        <Button Grid.Row="0" Grid.Column="2" Content="Категории инструментов"/>
+        <Button Grid.Row="0" Grid.Column="1" Content="Инструменты" Click="ToolsClick"/>
+        <Button Grid.Row="0" Grid.Column="2" Content="Расходные материалы" Click="ConsumablesClick"/>
         <Button Grid.Row="0" Grid.Column="3" Content="Составить договор"/>
         <Button Grid.Row="0" Grid.Column="4" Content="Настройки"/>
         

@@ -20,5 +20,15 @@ namespace ToolsRent.WPF
         {
             MainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
         }
+
+        private void ToolsClick(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new AddEditToolPage();
+        }
+
+        private void ConsumablesClick(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new AddEditConsumablePage();
+        }
     }
 }

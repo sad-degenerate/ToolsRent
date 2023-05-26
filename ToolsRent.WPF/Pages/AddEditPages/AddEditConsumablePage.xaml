@@ -1,0 +1,28 @@
+﻿<Page x:Class="ToolsRent.WPF.Pages.AddEditPages.AddEditConsumablePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:ToolsRent.WPF.Pages.AddEditPages"
+      mc:Ignorable="d"
+      Title="AddEditConsumablePage">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Name="ConsumableData">
+                <Label Content="Данные расходника:" Style="{StaticResource StackPanelHeaderLabel}"/>
+                
+                <Label Content="Название:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxName" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Цена за шт.:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxPricePerUnit" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Количество:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxCount" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Название единицы измерения:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxUnitName" Style="{StaticResource StackPanelProperty}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

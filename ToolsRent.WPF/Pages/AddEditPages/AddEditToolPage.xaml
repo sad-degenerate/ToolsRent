@@ -1,0 +1,30 @@
+﻿<Page x:Class="ToolsRent.WPF.Pages.AddEditPages.AddEditToolPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="AddEditToolPage">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Name="ToolData">
+                <Label Content="Данные инструмента:" Style="{StaticResource StackPanelHeaderLabel}"/>
+                
+                <Label Content="Название:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxName" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Количество:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxCount" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Залог:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxDeposit" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Стоимость аренды:" Style="{StaticResource StackPanelProperty}"/>
+                <TextBox Name="TbxPrice" Style="{StaticResource StackPanelProperty}"/>
+                
+                <Label Content="Расходные материалы:" Style="{StaticResource StackPanelProperty}"/>
+                <ListBox Name="LbxConsumables" Style="{StaticResource StackPanelProperty}"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
