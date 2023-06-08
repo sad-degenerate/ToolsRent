@@ -13,7 +13,7 @@ namespace ToolsRent.WPF
 
         private void RentersClick(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new AddEditRenterPage();
+            MainFrame.Content = new AddEditClientPage();
         }
 
         private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)

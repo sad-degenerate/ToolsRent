@@ -1,4 +1,6 @@
-﻿namespace ToolsRent.LIB.Model.HumanModel;
+﻿using System.Collections.Generic;
+
+namespace ToolsRent.LIB.Model.HumanModel;
 
 public class ClientStats : IBaseEntity
 {

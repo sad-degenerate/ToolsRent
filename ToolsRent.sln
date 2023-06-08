@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsRent.WPF", "ToolsRent.WPF\ToolsRent.WPF.csproj", "{0C07A75A-DAA0-45D2-AEFF-346C06CB8DD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsRent.LIB", "ToolsRent.LIB\ToolsRent.LIB.csproj", "{F2B7DD60-E7F0-4DF3-A98F-90E5B6A5A149}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolsRent.LIB", "ToolsRent.LIB\ToolsRent.LIB.csproj", "{2751AEDC-93C9-4222-9335-2AC6078100A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{0C07A75A-DAA0-45D2-AEFF-346C06CB8DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C07A75A-DAA0-45D2-AEFF-346C06CB8DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C07A75A-DAA0-45D2-AEFF-346C06CB8DD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2B7DD60-E7F0-4DF3-A98F-90E5B6A5A149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2B7DD60-E7F0-4DF3-A98F-90E5B6A5A149}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2B7DD60-E7F0-4DF3-A98F-90E5B6A5A149}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2B7DD60-E7F0-4DF3-A98F-90E5B6A5A149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2751AEDC-93C9-4222-9335-2AC6078100A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2751AEDC-93C9-4222-9335-2AC6078100A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2751AEDC-93C9-4222-9335-2AC6078100A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2751AEDC-93C9-4222-9335-2AC6078100A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

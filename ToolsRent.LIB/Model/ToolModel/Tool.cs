@@ -1,4 +1,6 @@
-﻿namespace ToolsRent.LIB.Model.ToolModel;
+﻿using System.Collections.Generic;
+
+namespace ToolsRent.LIB.Model.ToolModel;
 
 public class Tool : IBaseEntity
 {
