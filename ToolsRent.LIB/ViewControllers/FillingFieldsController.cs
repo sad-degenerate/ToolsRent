@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using ToolsRent.LIB.Model;
 
 namespace ToolsRent.LIB.ViewControllers;
@@ -10,7 +11,8 @@ public abstract class FillingFieldsController
 
     private string DeletePrefix(string fieldName)
     {
-        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Rbn") || fieldName.StartsWith("Cbx"))
+        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Rbn") || fieldName.StartsWith("Cbx") ||
+            fieldName.StartsWith("Rtb"))
         {
             fieldName = fieldName.Remove(0, 3);
         }
@@ -30,6 +32,12 @@ public abstract class FillingFieldsController
                 case TextBox textBox:
                     name = textBox.Name;
                     value = textBox.Text;
+                    break;
+                
+                case RichTextBox richTextBox:
+                    name = richTextBox.Name;
+                    var textRange = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+                    value = textRange.Text;
                     break;
                 
                 case RadioButton radioButton:
@@ -66,6 +74,15 @@ public abstract class FillingFieldsController
                         continue;
                     }
                     textBox.Text = valuesDict[DeletePrefix(textBox.Name)];
+                    break;
+                
+                case RichTextBox richTextBox:
+                    if (valuesDict.ContainsKey(DeletePrefix(richTextBox.Name)) == false)
+                    {
+                        continue;
+                    }
+                    richTextBox.Document.Blocks.Clear();
+                    richTextBox.Document.Blocks.Add(new Paragraph(new Run(valuesDict[DeletePrefix(richTextBox.Name)])));
                     break;
                 
                 case RadioButton radioButton:

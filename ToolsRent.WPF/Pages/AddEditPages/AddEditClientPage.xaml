@@ -43,7 +43,7 @@
                 <TextBox Name="TbxAmountOfPurchases" Style="{StaticResource StackPanelProperty}"/>
                 
                 <Label Content="Комментарии:" Style="{StaticResource StackPanelProperty}"/>
-                <RichTextBox Name="RtbComment" Style="{StaticResource StackPanelProperty}"/>
+                <RichTextBox Name="RtbComments" Style="{StaticResource StackPanelProperty}"/>
                 
                 <Button Content="Сохранить изменения" Name="BtnSave" Style="{StaticResource StackPanelSaveButton}"/>
             </StackPanel>
