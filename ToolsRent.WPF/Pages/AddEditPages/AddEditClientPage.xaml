@@ -7,7 +7,7 @@
       Title="AddEditRenterPage">
     <Grid>
         <ScrollViewer>
-            <StackPanel Name="RenterData">
+            <StackPanel Name="ClientData">
                 <Label Content="Данные клиента:" Style="{StaticResource StackPanelHeaderLabel}"/>
                 
                 <Label Content="Фамилия:" Style="{StaticResource StackPanelProperty}"/>
@@ -35,9 +35,9 @@
                 <TextBox Name="TbxPhone" Style="{StaticResource StackPanelProperty}"/>
                 
                 <Label Content="Статус:" Style="{StaticResource StackPanelProperty}"/>
-                <CheckBox Name="CbxGreenStatus" Style="{StaticResource StackPanelProperty}" Content="Зеленый"/>
-                <CheckBox Name="CbxYellowStatus" Style="{StaticResource StackPanelProperty}" Content="Желтый"/>
-                <CheckBox Name="CbxRedStatus" Style="{StaticResource StackPanelProperty}" Content="Красный"/>
+                <RadioButton Name="RbnGreenStatus" Style="{StaticResource StackPanelProperty}" Content="Зеленый" GroupName="Status" Tag="0" IsChecked="True"/>
+                <RadioButton Name="RbnYellowStatus" Style="{StaticResource StackPanelProperty}" Content="Желтый" GroupName="Status" Tag="1"/>
+                <RadioButton Name="RbnRedStatus" Style="{StaticResource StackPanelProperty}" Content="Красный" GroupName="Status" Tag="2"/>
                 <CheckBox Name="CbxDeposit" Style="{StaticResource StackPanelProperty}" Content="Без залога"/>
                 <Label Content="Сумма совершенных транзакций за все время:" Style="{StaticResource StackPanelProperty}"/>
                 <TextBox Name="TbxAmountOfPurchases" Style="{StaticResource StackPanelProperty}"/>

@@ -10,7 +10,7 @@ public abstract class FillingFieldsController
 
     private string DeletePrefix(string fieldName)
     {
-        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Cbx") || fieldName.StartsWith("Lbx"))
+        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Rbn"))
         {
             fieldName = fieldName.Remove(0, 3);
         }
@@ -22,8 +22,8 @@ public abstract class FillingFieldsController
     {
         foreach (var item in collection)
         {
-            string value;
-            string name;
+            var value = string.Empty;
+            var name = string.Empty;
 
             switch (item)
             {
@@ -32,23 +32,15 @@ public abstract class FillingFieldsController
                     value = textBox.Text;
                     break;
                 
-                case ComboBox comboBox:
-                    name = comboBox.Name;
-                    value = comboBox.SelectedIndex.ToString();
-                    break;
-                
-                case ListBox listBox:
-                    name = listBox.Name;
-                    if (listBox.SelectedItem is IBaseEntity entity)
+                case RadioButton radioButton:
+                    if (radioButton.IsChecked == false)
                     {
-                        value = entity.Id.ToString();
+                        continue;
                     }
-                    else
-                    {
-                        value = string.Empty;
-                    }
+                    name = radioButton.GroupName;
+                    value = radioButton.Tag.ToString();
                     break;
-                
+
                 default:
                     continue;
             }
@@ -71,10 +63,17 @@ public abstract class FillingFieldsController
                     textBox.Text = valuesDict[DeletePrefix(textBox.Name)];
                     break;
                 
-                case ComboBox comboBox when int.TryParse(valuesDict[DeletePrefix(comboBox.Name)], out var index):
-                    comboBox.SelectedIndex = index;
+                case RadioButton radioButton:
+                    if (valuesDict.ContainsKey(DeletePrefix(radioButton.GroupName)) == false)
+                    {
+                        continue;
+                    }
+                    if (valuesDict[DeletePrefix(radioButton.GroupName)] == (string)radioButton.Tag)
+                    {
+                        radioButton.IsChecked = true;
+                    }
                     break;
-                
+
                 default:
                     continue;
             }
