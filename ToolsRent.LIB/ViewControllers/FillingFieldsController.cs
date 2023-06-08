@@ -10,7 +10,7 @@ public abstract class FillingFieldsController
 
     private string DeletePrefix(string fieldName)
     {
-        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Rbn"))
+        if (fieldName.StartsWith("Tbx") || fieldName.StartsWith("Rbn") || fieldName.StartsWith("Cbx"))
         {
             fieldName = fieldName.Remove(0, 3);
         }
@@ -39,6 +39,11 @@ public abstract class FillingFieldsController
                     }
                     name = radioButton.GroupName;
                     value = radioButton.Tag.ToString();
+                    break;
+                
+                case CheckBox checkBox:
+                    name = checkBox.Name;
+                    value = checkBox.IsChecked.ToString();
                     break;
 
                 default:
@@ -72,6 +77,15 @@ public abstract class FillingFieldsController
                     {
                         radioButton.IsChecked = true;
                     }
+                    break;
+                
+                case CheckBox checkBox:
+                    if (valuesDict.ContainsKey(DeletePrefix(checkBox.Name)) == false)
+                    {
+                        continue;
+                    }
+
+                    checkBox.IsChecked = valuesDict[DeletePrefix(checkBox.Name)] == "True";
                     break;
 
                 default:

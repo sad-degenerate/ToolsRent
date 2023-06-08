@@ -26,7 +26,7 @@ public class FillingClientFieldsController : FillingFieldsController
             { "amountOfPurchases", client.ClientStats.AmountOfPurchases.ToString() },
             { "comments", client.ClientStats.Comments },
             { "status", ((int)client.ClientStats.ClientList).ToString() },
-            { "withoutDeposit", client.ClientStats.WithoutDeposit.ToString() },
+            { "deposit", client.ClientStats.WithoutDeposit.ToString() },
         };
     }
 }
